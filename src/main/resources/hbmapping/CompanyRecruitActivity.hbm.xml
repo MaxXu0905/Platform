@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.ailk.sets.platform.intf.domain.CompanyRecruitActivity"
+		table="company_recruit_activity">
+
+		<!-- 活动id -->
+		<id name="activityId" type="java.lang.Integer">
+			<column name="activity_id" />
+            <generator class="native" />
+		</id>
+
+		<!-- 测评id -->
+		<property name="positionId" type="java.lang.Integer">
+			<column name="position_id" />
+		</property>
+
+		<!-- 地址id -->
+		<property name="addressId" type="java.lang.String">
+			<column name="address_id" />
+		</property>
+
+		<!-- 活动日期 -->
+		<property name="activityDate" type="java.lang.String">
+			<column name="activity_date" length="10" not-null="true" />
+		</property>
+
+		<!-- 开始时间 -->
+		<property name="beginTime" type="java.lang.String">
+			<column name="begin_time" length="8" />
+		</property>
+
+		<!-- 结束时间 -->
+		<property name="endTime" type="java.lang.String">
+			<column name="end_time" length="8" />
+		</property>
+
+		<!-- 测试状态 -->
+		<property name="testState" type="java.lang.Integer">
+			<column name="test_state" not-null="true">
+				<comment>考试状态, 0-未开始, 1-已开始, 2-已结束</comment>
+			</column>
+		</property>
+		
+		<!-- passcode兼容老数据，统计参考人数 -->
+		<property name="passcode" type="java.lang.String">
+			<column name="passcode" length="12" not-null="true" />
+		</property>
+		
+		<property name="notifyTestResult" type="java.lang.Integer">
+			<column name="notify_test_result" />
+		</property>
+		
+	</class>
+</hibernate-mapping>

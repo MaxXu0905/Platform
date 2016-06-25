@@ -1,0 +1,1 @@
+mvn deploy:deploy-file -DgroupId=com.ailk.sets -DartifactId=IPlatform -Dversion=2.6.0-SNAPSHOT -Dpackaging=jar -Dfile=E:\MyEclipse10Work\platform\target\Platform-2.6.0-SNAPSHOT-interface.jar -Durl=http://10.1.249.33:8081/nexus/content/repositories/snapshots/

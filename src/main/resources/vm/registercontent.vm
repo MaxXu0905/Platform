@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 16px;
+}
+body {
+	margin:0px;
+	padding:0px;
+	background-color:#FFFFFF;
+	font-family: "微软雅黑";
+	line-height:26px;
+	color:#000000;
+}
+.tip{color:#808080;font-size:14px;line-height:20px;}
+-->
+</style>
+</head>
+
+<body>
+<div style="padding:20px;">
+<div style="padding-bottom:20px;">林萌芽，您好！</div>
+<div style="padding-bottom:30px;">
+毕希研【员工号:16539, 邮箱:bixy@asiainfo-linkage.com】 提交了一个SETS帐号申请。
+<br />您可以登录SETS企业管理页面<a href="http://www.setsadmin.com/AILK/">www.setsadmin.com/AILK/</a>进行审核。</div>
+<div style="border-top:1px solid #c2c2c2;border-bottom:1px solid #c2c2c2;padding:10px 0px;margin-bottom:30px;margin-top:30px;"> 
+<img src="http://imgcdn.zcool.com.cn/e589528efd830000001b7f7f5873" />
+ </div>
+
+<div class="tip">
+     此信由SETS软件评测系统发出，系统不接收回信，因此请勿直接回复。<br />
+      如有疑问或者问题，请发送您的问题至<a href="mailto:questions@sets.com">questions@sets.com </a>或与SETS系统管理员联系(400-11111111)，SETS客服代表会及时帮您解决问题的！
+      再次感谢使用SETS评测产品。</div>
+     
+
+</div>
+</body>
+</html>

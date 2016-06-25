@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>邮件提醒</title>
+</head>
+<body style="padding:20px;background:#ffffff; font-size:14px; font-family:“微软雅黑”; color:#595959; line-height:25px;">
+<div style="width:700px;margin:0 auto;background:#fff;text-align:left;padding:30px 40px;border-top:4px solid #4acef5;">
+    <div style="FONT-WEIGHT: bold;font-size:18px;font-family: 微软雅黑;">$entity.employerName,您好：</div>
+    <div style=" margin-left:40px;padding:14px 0px;font-size:16px; COLOR: rgb(102,102,102);font-family: 微软雅黑;">经勘测，$entity.college, $entity.addresses支持<span style="color:#c00000;">$entity.seatNumber</span>人参加考试。请预估您的考试人数，并评估是否满足微信考试。如果不能，请转成PC在线考试。</div>
+  <div style=" margin-left:40px;padding:14px 0px;font-size:14px; COLOR: rgb(102,102,102);font-family: 微软雅黑; margin-top:20px;">
+    <span style=" font-size:18px; font-weight:bold;">一键转在线</span>&nbsp;&nbsp;&nbsp;&nbsp;有两种方法：<br />
+    1、<span style="font-weight:600;">手动发送测评：</span>登录百一测评，选择相应的测评。点击“邀请候选人”按钮，发送邀请，考生邮箱中将会收到一份在线测评邀请。<br />
+    2、<span style="font-weight:600;">现场考生在线申测：</span>关注“百一测评”微信公众号，选择相应的测评，设置申测截止时间和考试截止时间。现场告诉考生关注“百一微测试”公众号后，输入<span style="color:#c00000">口令#姓名#邮箱</span>，邮箱中将收到一份在线测评邀请。
+    </div>
+    <div style="COLOR:#b3b3b3;border-top:1px solid #e5e5e5;padding-top:10px;margin-top:10px;font-size:14px;line-height:20px;font-family: 微软雅黑;">此为系统邮件，请勿直接回复。</div>	  
+</div>
+</body>
+</html>

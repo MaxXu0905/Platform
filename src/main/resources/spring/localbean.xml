@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        ">
+
+
+	<!-- 企业招聘者登录验证服务 -->
+	<bean id="login" class="com.ailk.sets.platform.service.LoginImpl" />
+	<!-- 获取系统配置服务 -->
+	<bean id="config" class="com.ailk.sets.platform.service.ConfigImpl" />
+	<bean id="candidateInfo" class="com.ailk.sets.platform.service.CandidateInfoServiceImpl" />
+	<!-- 测评邀请服务 -->
+	<bean id="invite" class="com.ailk.sets.platform.service.InviteImpl"></bean>
+	<!-- 招聘人采集信息服务 -->
+	<bean id="infoCollect" class="com.ailk.sets.platform.service.InfoCollectImpl" />
+	<!-- 职位服务 -->
+	<bean id="position" class="com.ailk.sets.platform.service.PositionImpl" />
+	
+	<!-- 题库服务 -->
+	<bean id="qbBase" class="com.ailk.sets.platform.service.QbBaseImpl" />
+
+	<!--考试信息服务 -->
+	<bean id="examineService" class="com.ailk.sets.platform.service.ExamineServiceImpl" />
+
+	<!-- 报告服务 -->
+	<bean id="report" class="com.ailk.sets.platform.service.ReportImpl" />
+
+	<!-- 应聘人考试服务 -->
+	<bean id="candidateTest" class="com.ailk.sets.platform.service.CandidateTestImpl" />
+
+	<!-- 试卷实例服务 -->
+	<bean id="paperInstance" class="com.ailk.sets.platform.service.PaperInstanceImpl" />
+
+	<bean id="employerTrial" class="com.ailk.sets.platform.service.EmployerTrialImpl" />
+
+	<!-- 校招实例服务 -->
+	<bean id="schoolInfoService" class="com.ailk.sets.platform.service.SchoolInfoServiceImpl" />
+	<!-- 校招实例服务 -->
+	<bean id="schoolExamService" class="com.ailk.sets.platform.service.SchoolExamServiceImpl" />
+
+	<bean id="schoolPositionService" class="com.ailk.sets.platform.service.SchoolPositionServiceImpl" />
+
+	<bean id="schoolReportService" class="com.ailk.sets.platform.service.SchoolReportServiceImpl" />
+
+	<bean id="wxCandServiceImpl" class="com.ailk.sets.platform.service.WXCandServiceImpl" />
+
+	<bean id="wxEmplServiceImpl" class="com.ailk.sets.platform.service.WXEmplServiceImpl" />
+
+	<bean id="reqQueueManagerServiceImpl" class="com.ailk.sets.platform.service.ReqQueueManagerServiceImpl" />
+	
+     <!-- 试卷服务 -->
+	<bean id="paperImpl" class="com.ailk.sets.platform.service.PaperImpl" />
+	
+	<bean id="gradeService" class="com.ailk.sets.grade.service.GradeServiceImpl" />
+
+	<bean id="loadService" class="com.ailk.sets.grade.service.LoadServiceImpl" />
+	
+	<bean id="routeService" class="com.ailk.sets.grade.service.RouteServiceImpl" />
+	
+	<bean id="ssoLoginImpl" class="com.ailk.sets.platform.service.SSOLoginImpl" />
+	
+	<bean id="outCallServiceImpl" class="com.ailk.sets.platform.service.local.OutCallServiceImpl" />
+	
+	<bean id="iConfigSysParamService" class="com.ailk.sets.platform.service.ConfigSysParamServiceImpl" />
+   <bean id="appService" class="com.ailk.sets.platform.service.AppServiceImpl" />
+   	<bean id="systemService" class=" com.ailk.sets.platform.service.SystemService" />
+   
+	
+</beans>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+        ">
+
+	<!-- Application name -->
+	<dubbo:application name="provider-of-platform-app" />
+	<!-- registry address, used for service to register itself -->
+	<dubbo:registry address="${zookeeper.registry.address}"
+		group="${zookeeper.registry.group}"
+		file="${user.home}/.dubbo/dubbo-registry-provider-platform-${zookeeper.registry.group}" />
+	<dubbo:protocol name="dubbo" port="${dubbo.protocol.port}" />
+
+	<!-- 企业招聘者登录验证服务 -->
+	<dubbo:service interface="com.ailk.sets.platform.intf.empl.service.ILogin"
+		ref="login" timeout="200000" />
+	<bean id="login" class="com.ailk.sets.platform.service.LoginImpl" />
+	<!-- 获取系统配置服务 -->
+	<dubbo:service interface="com.ailk.sets.platform.intf.empl.service.IConfig"
+		ref="config" timeout="200000" />
+	<bean id="config" class="com.ailk.sets.platform.service.ConfigImpl" />
+	<!-- 获取应聘人信息相关服务 -->
+	<dubbo:service
+		interface="com.ailk.sets.platform.intf.cand.service.ICandidateInfoService"
+		ref="candidateInfo" timeout="200000" />
+	<bean id="candidateInfo" class="com.ailk.sets.platform.service.CandidateInfoServiceImpl" />
+	<!-- 测评邀请服务 -->
+	<dubbo:service interface="com.ailk.sets.platform.intf.empl.service.IInvite"
+		ref="invite" timeout="200000" />
+	<bean id="invite" class="com.ailk.sets.platform.service.InviteImpl"></bean>
+	<!-- 招聘人采集信息服务 -->
+	<dubbo:service interface="com.ailk.sets.platform.intf.empl.service.IInfoCollect"
+		ref="infoCollect" timeout="200000" />
+	<bean id="infoCollect" class="com.ailk.sets.platform.service.InfoCollectImpl" />
+	<!-- 职位服务 -->
+	<dubbo:service interface="com.ailk.sets.platform.intf.empl.service.IPosition"
+		ref="position" timeout="600000" />
+	<bean id="position" class="com.ailk.sets.platform.service.PositionImpl" />
+
+	<!-- 题库服务 -->
+	<dubbo:service interface="com.ailk.sets.platform.intf.empl.service.IQbBase"
+		ref="qbBase" timeout="600000" />
+	<bean id="qbBase" class="com.ailk.sets.platform.service.QbBaseImpl" />
+
+	<!--考试信息服务 -->
+	<dubbo:service
+		interface="com.ailk.sets.platform.intf.cand.service.IExamineService"
+		ref="examineService" timeout="200000" />
+	<bean id="examineService" class="com.ailk.sets.platform.service.ExamineServiceImpl" />
+
+	<!-- 报告服务 -->
+	<dubbo:service interface="com.ailk.sets.platform.intf.empl.service.IReport"
+		ref="report" timeout="200000" />
+	<bean id="report" class="com.ailk.sets.platform.service.ReportImpl" />
+
+	<!-- 应聘人考试服务 -->
+	<dubbo:service
+		interface="com.ailk.sets.platform.intf.cand.service.ICandidateTest"
+		ref="candidateTest" timeout="200000" />
+	<bean id="candidateTest" class="com.ailk.sets.platform.service.CandidateTestImpl" />
+
+	<!-- 试卷实例服务 -->
+	<dubbo:service
+		interface="com.ailk.sets.platform.intf.cand.service.IPaperInstance"
+		ref="paperInstance" timeout="200000" />
+	<bean id="paperInstance" class="com.ailk.sets.platform.service.PaperInstanceImpl" />
+
+	<dubbo:service
+		interface="com.ailk.sets.platform.intf.empl.service.IEmployerTrial"
+		ref="employerTrial" timeout="200000" />
+	<bean id="employerTrial" class="com.ailk.sets.platform.service.EmployerTrialImpl" />
+
+	<!-- 校招实例服务 -->
+	<dubbo:service
+		interface="com.ailk.sets.platform.intf.cand.service.ISchoolInfoService"
+		ref="schoolInfoService" timeout="200000" />
+	<bean id="schoolInfoService" class="com.ailk.sets.platform.service.SchoolInfoServiceImpl" />
+	<!-- 校招实例服务 -->
+	<dubbo:service
+		interface="com.ailk.sets.platform.intf.cand.service.ISchoolExamService"
+		ref="schoolExamService" timeout="200000" />
+	<bean id="schoolExamService" class="com.ailk.sets.platform.service.SchoolExamServiceImpl" />
+
+	<dubbo:service
+		interface="com.ailk.sets.platform.intf.empl.service.ISchoolPositionService"
+		ref="schoolPositionService" timeout="200000" />
+	<bean id="schoolPositionService"
+		class="com.ailk.sets.platform.service.SchoolPositionServiceImpl" />
+
+	<dubbo:service
+		interface="com.ailk.sets.platform.intf.empl.service.ISchoolReportService"
+		ref="schoolReportService" timeout="200000" />
+	<bean id="schoolReportService" class="com.ailk.sets.platform.service.SchoolReportServiceImpl" />
+
+	<!-- 应聘人微信服务 -->
+	<dubbo:service
+		interface="com.ailk.sets.platform.intf.cand.service.IWXCandService"
+		ref="wxCandServiceImpl" timeout="200000" />
+	<bean id="wxCandServiceImpl" class="com.ailk.sets.platform.service.WXCandServiceImpl" />
+
+	<!-- 招聘人微信服务 -->
+	<dubbo:service
+		interface="com.ailk.sets.platform.intf.empl.service.IWXEmplService"
+		ref="wxEmplServiceImpl" timeout="200000" />
+	<bean id="wxEmplServiceImpl" class="com.ailk.sets.platform.service.WXEmplServiceImpl" />
+
+	<!-- 请求队列服务 -->
+	<dubbo:service
+		interface="com.ailk.sets.platform.intf.cand.service.IReqQueueManagerService"
+		ref="reqQueueManagerServiceImpl" timeout="200000" />
+	<bean id="reqQueueManagerServiceImpl"
+		class="com.ailk.sets.platform.service.ReqQueueManagerServiceImpl" />
+
+	<!-- 试卷服务 -->
+	<dubbo:service interface="com.ailk.sets.platform.intf.empl.service.IPaper"
+		ref="paperImpl" timeout="200000" />
+	<bean id="paperImpl" class="com.ailk.sets.platform.service.PaperImpl" />
+
+	<dubbo:service interface="com.ailk.sets.grade.intf.IGradeService"
+		ref="gradeService" timeout="60000" loadbalance="consistenthash">
+		<dubbo:method name="genExam" timeout="300000"></dubbo:method>
+		<dubbo:method name="runTest" timeout="300000"></dubbo:method>
+	</dubbo:service>
+	<bean id="gradeService" class="com.ailk.sets.grade.service.GradeServiceImpl" />
+
+	<dubbo:service interface="com.ailk.sets.grade.intf.ILoadService"
+		ref="loadService" timeout="600000" loadbalance="consistenthash">
+		<dubbo:method name="exportPosition" timeout="600000"></dubbo:method>
+	</dubbo:service>
+	<bean id="loadService" class="com.ailk.sets.grade.service.LoadServiceImpl" />
+
+	<dubbo:service interface="com.ailk.sets.grade.intf.IRouteService"
+		ref="routeService" timeout="600000" loadbalance="consistenthash">
+	</dubbo:service>
+	<bean id="routeService" class="com.ailk.sets.grade.service.RouteServiceImpl" />
+
+	<dubbo:service interface="com.ailk.sets.platform.intf.wx.service.IWeixinService"
+		ref="iWXCandService" timeout="600000" loadbalance="consistenthash">
+	</dubbo:service>
+	<bean id="iWXCandService" class="com.ailk.sets.platform.service.WeixinServiceImpl" />
+
+	<dubbo:service interface="com.ailk.sets.platform.intf.empl.service.ISSOLogin"
+		ref="ssoLoginImpl" timeout="600000" loadbalance="consistenthash">
+	</dubbo:service>
+	<bean id="ssoLoginImpl" class="com.ailk.sets.platform.service.SSOLoginImpl" />
+	
+	<dubbo:service interface="com.ailk.sets.platform.intf.empl.service.IOutCallService"
+		ref="outCallServiceImpl" timeout="600000" loadbalance="consistenthash">
+	</dubbo:service>
+	<bean id="outCallServiceImpl" class="com.ailk.sets.platform.service.local.OutCallServiceImpl" />
+	
+	<dubbo:service interface="com.ailk.sets.platform.intf.empl.service.IConfigSysParamService"
+		ref="iConfigSysParamService" timeout="600000" loadbalance="consistenthash">
+	</dubbo:service>
+	<bean id="iConfigSysParamService" class="com.ailk.sets.platform.service.ConfigSysParamServiceImpl" />
+	
+	<dubbo:service interface="com.ailk.sets.platform.intf.cand.service.IAppService"
+		ref="appServcie" timeout="600000" loadbalance="consistenthash">
+	</dubbo:service>
+	<bean id="appServcie" class="com.ailk.sets.platform.service.AppServiceImpl" />
+	
+	<dubbo:service interface="com.ailk.sets.platform.intf.empl.service.ISystemService"
+		ref="systemService" timeout="600000" loadbalance="consistenthash">
+	</dubbo:service>
+	<bean id="systemService" class=" com.ailk.sets.platform.service.SystemService" />
+</beans>

@@ -1,0 +1,41 @@
+<DIV style="TEXT-ALIGN: center; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(238,238,238); TEXT-INDENT: 0px; LETTER-SPACING: normal; FONT: 14px/21px Verdana; WHITE-SPACE: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px;">
+  <div style="PADDING-BOTTOM: 30px; LINE-HEIGHT: 1.5; MARGIN: 0px auto; WIDTH: 680px; OVERFLOW: hidden; PADDING-TOP: 30px">
+    <div style="BORDER-BOTTOM: rgb(220,220,220) 1px solid; TEXT-ALIGN: left; BORDER-LEFT: rgb(220,220,220) 1px solid; LINE-HEIGHT: 1.5; BACKGROUND-COLOR: rgb(255,255,255); BORDER-TOP-STYLE: none; OVERFLOW: hidden; BORDER-RIGHT: rgb(220,220,220) 1px solid">
+      <div style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 1.5; width:600px;margin-left:40px; PADDING-TOP: 0px">
+
+	<!-- -->	
+<!--正文开始 -->
+<DIV style="LINE-HEIGHT: 1.5; MARGIN-TOP: 10px; FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 14px; PADDING-TOP: 20px">
+<DIV style="LINE-HEIGHT: 28px; FONT-WEIGHT: bold;font-size:16px;">$entity.candidateName，您好：</DIV>
+</DIV>
+<DIV style="LINE-HEIGHT: 1.5; text-indent:2em;margin-top:10px">
+感谢您参加$entity.companyName的测评，您的表现给我们留下了深刻印象。但是您擅长的侧重方向与$entity.testPositionName的要求略有差距，所以很遗憾这一次我们没能继续合作。
+</DIV>
+<DIV style="LINE-HEIGHT: 1.5; text-indent:2em;margin-top:10px">
+您的简历已经在我们这里存档，未来我们还会发布更多职位，请持续关注我们的职位发布页！
+</DIV>
+<!--正文结束 -->
+      
+      </div>
+<!--bottom 
+      <div style="LINE-HEIGHT: 20px; BACKGROUND-COLOR: rgb(249,249,249); MARGIN-TOP: 25px; FONT-FAMILY: 微软雅黑; HEIGHT: 180px; COLOR: rgb(51,51,51); FONT-SIZE: 12px;BORDER-TOP: rgb(234,234,234) 1px solid;padding-top:20px;">
+	<div style="width:560px;height:150px;margin-left:32px;BACKGROUND: url(http://101testneeds.oss-cn-beijing.aliyuncs.com/pictures/employee/qrcode_for_employee_0.png) no-repeat left top;padding-left:160px;">
+	  <div style="font-size:24px;line-height:40px;">扫一扫，<br>得到更多招聘信息！</div>
+		<div style="color:#CCCCCC;font-size:14px;padding-top:23px;">
+		    这是一封来自百一测评自动发送的邮件，请勿直接回复。<br>再次感谢使用百一(<a href="www.101test.com" style="color:#93bbd0;">www.101test.com</a>)测评产品。
+	    </div> 	 
+	</div>
+		  <div style="clear:both;"></div> 	  
+      </div>
+bottom结束 -->  
+
+<div style="LINE-HEIGHT: 20px; BACKGROUND-COLOR: rgb(249,249,249); MARGIN-TOP: 25px; FONT-FAMILY: 微软雅黑; HEIGHT: 50px; COLOR: 
+rgb(51,51,51); FONT-SIZE: 12px;BORDER-TOP: rgb(234,234,234) 1px solid;padding:20px 40px;">
+<div style="color:#CCCCCC;font-size:14px;">
+    这是一封来自百一测评自动发送的邮件，请勿直接回复。<br>再次感谢使用百一(<a href="www.101test.com" 
+style="color:#93bbd0;">www.101test.com</a>)测评产品。
+    </div>    
+</div>
+    </div>
+  </div>
+</DIV>

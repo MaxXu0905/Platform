@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.ailk.sets.platform.intf.domain.ConfigMobileRatio"
+		table="config_mobile_ratio">
+
+		<!-- 城市 -->
+		<id name="city" type="java.lang.String">
+			<column name="city" length="30" />
+		</id>
+
+		<!-- 移动终端占比 -->
+		<property name="mobileRatio" type="java.lang.Double">
+			<column name="mobile_ratio" />
+		</property>
+
+		<!-- 联通终端占比 -->
+		<property name="unicomRatio" type="java.lang.Double">
+			<column name="unicom_ratio" />
+		</property>
+
+		<!-- 电信终端占比 -->
+		<property name="telecomRatio" type="java.lang.Double">
+			<column name="telecom_ratio" />
+		</property>
+
+	</class>
+</hibernate-mapping>

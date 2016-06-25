@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>百一测评</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body style="padding:20px;background:#dfdfdf;text-align:center;">
+<center>
+<div style="width:700px;background:#fff;padding:14px;text-align:left;padding:30px 40px;border-top:4px solid #4acef5;">
+    <div style="FONT-WEIGHT: bold;font-size:18px;font-family: 微软雅黑;">$entity.candidateName，您好：</div>
+    <div style="padding:14px 0px;font-size:16px; COLOR: rgb(102,102,102);font-family: 微软雅黑;">$entity.companyName邀请您参加<span id="company_position">$entity.positionName</span>测评，详情如下：</div>
+     <div style="margin:15px 10px 15px 30px;padding:1px 0px 1px 20px;font-size:16px; COLOR: rgb(102,102,102);font-family: 微软雅黑;line-height:26px;">
+   #if($entity.url == '【考试链接地址】')
+               在线测评链接： <a style="color:#0092dd;" href="#">$entity.url</a><br />
+   #else
+               在线测评链接： <a style="color:#0092dd;" href="$entity.url">$entity.url</a><br />
+   #end      
+          测评试卷结构：<span style="color:#0e8ef1;">$entity.paperContent，合计约需$entity.totalTime分钟；</span><br />
+     #if($entity.effDate)
+                       测评开始时间：<span style="color:#0e8ef1;">$entity.effDate</span><br />
+     #end
+      <span id="beginDate" style="display:none">
+                       测评开始时间：<span style="color:#0e8ef1;">2013年3月2日13时13分00秒</span><br />
+      </span>
+    <span id="validDate">测评结束时间：<span style="color:#0e8ef1;">$entity.expDate</span></span></div>
+<div style="LINE-HEIGHT: 22px;font-size:14px; COLOR: rgb(102,102,102);padding-top:10px;font-family: 微软雅黑;">
+请使用IE8以上版本或者其他主流浏览器答题，并#if($entity.canWithOutCamera==0)尽量#end<span style="display:none" id="try_">尽量</span>确保您的电脑摄像头#if($entity.hasInterview==1)、麦克风#end运行正常，关闭易出现弹窗的应用；<br />
+</div> 
+  <div style="LINE-HEIGHT: 24px;font-size:14px; COLOR: rgb(102,102,102);padding:16px 0px 20px 0px;font-family: 微软雅黑;margin-top:20px;border-top:1px dashed #d3d3d3;">
+     <span id="selfContext">
+         #if($entity.selfContext)
+         $entity.selfContext
+         #else 
+                           此次测评成绩将作为公司员工录用时的重要参考材料，请务必完成全部试题。
+         #end
+     </span>
+  </div> 
+  <div style="COLOR:#b3b3b3;border-top:1px solid #e5e5e5;padding-top:10px;margin-top:10px;font-size:14px;line-height:20px;font-family: 微软雅黑;">答题过程中如果遇到系统问题请联系服务热线01082166778或客服邮箱service@101test.com。<br />此为系统邮件，请勿直接回复。</div>	  
+</div>
+</center>
+</body>
+</html>

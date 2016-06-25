@@ -1,0 +1,63 @@
+﻿<DIV style="TEXT-ALIGN: center; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(238,238,238); TEXT-INDENT: 0px; LETTER-SPACING: normal; FONT: 14px/21px Verdana; WHITE-SPACE: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px;">
+  <div style="PADDING-BOTTOM: 30px; LINE-HEIGHT: 1.5; MARGIN: 0px auto; WIDTH: 680px; OVERFLOW: hidden; PADDING-TOP: 30px">
+    <div style="BORDER-BOTTOM: rgb(220,220,220) 1px solid; TEXT-ALIGN: left; BORDER-LEFT: rgb(220,220,220) 1px solid; LINE-HEIGHT: 1.5; BACKGROUND-COLOR: rgb(255,255,255); BORDER-TOP-STYLE: none; OVERFLOW: hidden; BORDER-RIGHT: rgb(220,220,220) 1px solid">
+      <div style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 1.5; width:600px;margin-left:40px; PADDING-TOP: 30px">
+        <div style="LINE-HEIGHT: 1.5; FONT-FAMILY: 'Microsoft YaHei'; HEIGHT: 30px;background:#052230;padding:4px 2px 2px 2px;"><a style="OUTLINE-STYLE: none; OUTLINE-COLOR: invert; OUTLINE-WIDTH: medium; DISPLAY: block; FLOAT: left; CURSOR: pointer" href="http://www.101test.com" target=_blank><img style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; DISPLAY: block; BORDER-TOP: medium none; BORDER-RIGHT: medium none" border=none src="http://101testneeds.oss-cn-beijing.aliyuncs.com/pictures/logo101.png"/></a>
+            <div style="LINE-HEIGHT: 24px; FLOAT: left; COLOR: #fff; MARGIN-LEFT: 5px; FONT-SIZE: 21px">百一测评</div>
+        </div>
+        <div style="LINE-HEIGHT: 1.5; MARGIN-TOP: 10px; FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 14px; PADDING-TOP: 14px">
+          <div style="LINE-HEIGHT: 28px; FONT-WEIGHT: bold;font-size:16px;">$entity.employerName，您好：</div>
+          <div style="LINE-HEIGHT: 22px; COLOR: rgb(102,102,102);">$entity.candidateName（<a href="mailto:$entity.candidateEmail">$entity.candidateEmail</a>）已通过了您负责的【<span>$entity.testPositionName</span>】测评，详细报告如下：</div>
+          <div style="LINE-HEIGHT: 22px; COLOR: rgb(102,102,102);MARGIN-TOP: 20px;border-top:1px solid #dddddd;padding-top:10px;">
+		  <div style="float:left;width:380px;padding-left:35px;">
+			 <div style="padding-bottom:10px;">测评得分：<span class="b" style="padding-right:35px;">$entity.score</span></div>
+			</div>
+		#if(1 == $entity.hasPortrait)
+		 	<div style="float:left;width:170px;"><img src="$entity.portrait" width="146" height="103" style="border:1px solid #dddddd;"/></div>	 
+ 		#end
+ <div style="clear:both;"></div>
+		  </div>
+ 
+        <div style="LINE-HEIGHT: 1.5;margin-top:6px;padding-top:5px;">
+		<table width="100%;" border="0" cellpadding="0" cellspacing="1" bgcolor="#dddddd" class="tableline">
+		   <tr>
+            <td colspan="7" align="center" bgcolor="#f3f3f3">技术基础各项得分</td>
+            </tr>
+          <tr>
+             #foreach($reportItem in $entity.items)
+	         <td align="center" bgcolor="#FFFFFF">$reportItem.name<br />
+	         	<span class="b2">#if(!$reportItem.score) 未打分 #else $reportItem.score #end</span>
+	         </td>
+			#end
+          </tr>
+        </table>
+	    </div>
+		   <div  style="LINE-HEIGHT: 1.5; MARGIN-TOP: 20px;word-wrap: break-word; word-break: normal;">
+		   <span class="link"><a href="$entity.reportUrl" >点击此处，查看测评报告</a></span>，如果链接不能直接打开，请拷贝【$entity.reportUrl】到浏览器地址中直接访问。</div>
+      </div>
+      </div>
+	<!--bottom  
+	      <div style="LINE-HEIGHT: 20px; BACKGROUND-COLOR: rgb(249,249,249); MARGIN-TOP: 25px; FONT-FAMILY: 微软雅黑; HEIGHT: 180px; COLOR: rgb(51,51,51); FONT-SIZE: 12px;BORDER-TOP: rgb(234,234,234) 1px solid;padding-top:20px;">
+		<div style="width:560px;height:150px;margin-left:32px;BACKGROUND: url(http://101testneeds.oss-cn-beijing.aliyuncs.com/pictures/employer/qrcode_for_employer_0.png) no-repeat left top;padding-left:160px;">
+		  <div style="font-size:24px;line-height:40px;">扫一扫，<br>发现更多人才。</div>
+			<div style="color:#CCCCCC;font-size:14px;padding-top:23px;">
+			    这是一封来自百一测评自动发送的邮件，请勿直接回复。<br>再次感谢使用百一(<a href="www.101test.com" style="color:#93bbd0;">www.101test.com</a>)测评产品。
+		    </div> 	 
+		</div>
+			  <div style="clear:both;"></div> 	  
+	      </div>
+	bottom结束 -->  
+	
+	
+	<div style="LINE-HEIGHT: 20px; BACKGROUND-COLOR: rgb(249,249,249); MARGIN-TOP: 25px; FONT-FAMILY: 微软雅黑; HEIGHT: 50px; COLOR: 
+rgb(51,51,51); FONT-SIZE: 12px;BORDER-TOP: rgb(234,234,234) 1px solid;padding:20px 40px;">
+<div style="color:#CCCCCC;font-size:14px;">
+    这是一封来自百一测评自动发送的邮件，请勿直接回复。<br>再次感谢使用百一(<a href="www.101test.com" 
+style="color:#93bbd0;">www.101test.com</a>)测评产品。
+    </div>    
+</div>
+
+	
+    </div>
+  </div>
+</DIV>

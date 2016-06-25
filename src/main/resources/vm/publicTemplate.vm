@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<style type="text/css">
+*{
+padding:0px;
+margin:0px;
+	font-family: "微软雅黑",SimSun,sans-serif;
+	color: #515151;
+	font-size:14px;
+	line-height:20px;
+}
+.res{float:left; border-left:1px solid #d0d0d0;}
+.res li{float:left;
+list-style:none;}
+.cp{height:80px;border-right:1px solid #d0d0d0;padding:0px 20px;}
+.cp div{text-align:center;}
+.a{color:#5bc0de;padding-top:10px;line-height:20px;}
+.b{
+	font-size:20px;
+	text-align:center;
+	color:#ff7b00;
+line-height:20px;
+	font-family:"Times New Roman", Times, serif;
+}
+.b2{
+	font-size:14px;
+	text-align:center;
+	color:#ff7b00;
+	line-height:30px;
+}
+.tableline td{padding:8px 0px;}
+.button{
+display:block;
+width:280px;
+height:40px;
+line-height:40px;
+border:1px solid #CCCCCC;
+text-align:center;
+margin:0px auto;
+background:#0092dd;
+color:#FFFFFF;
+font-size:18px;
+border-radius:6;
+}
+.link a{color:#0092dd;}
+.link a:hover{color:#0bbbe1;}
+</style>
+<body>
+ #parse("vm/${entity.path}.vm")
+</body>
+</html>

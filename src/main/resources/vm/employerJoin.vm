@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>百一测评</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body style="padding:20px;background:#dfdfdf;text-align:center;">
+<div style="width:700px;background:#fff;padding:14px;text-align:left;padding:30px 40px;border-top:4px solid #4acef5;">
+    <div style="FONT-WEIGHT: bold;font-size:18px;font-family: 微软雅黑;">Hi，$entity.employerMail：</div>
+    <div style="padding:12px 0px;font-size:16px; COLOR: rgb(102,102,102);font-family: 微软雅黑;">$entity.employerName【$entity.companyName】邀请您加入百一测评，并委托您和他一起招聘。</div>
+     <div style="padding:26px 0px;font-size:16px; COLOR: rgb(102,102,102);font-family: 微软雅黑;">请点击链接确认邀请。<br />链接地址： <a style="color:#0092dd;" href="$entity.url">$entity.url</a></div>
+	  <div style="LINE-HEIGHT: 24px;font-size:16px; COLOR: rgb(102,102,102);padding-top:10px;padding-bottom:10px;font-family: 微软雅黑;">
+如果无法点击链接，请复制链接到浏览器中打开。<br />
+</div>
+  
+  <div style="COLOR:#b3b3b3;border-top:1px solid #c6c6c6;padding-top:10px;margin-top:10px;font-size:14px;font-family: 微软雅黑;">此为系统邮件，请勿直接回复。</div>	  
+
+</div>
+
+</body>
+</html>

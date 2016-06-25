@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<!DOCTYPE mapping PUBLIC "-//EXOLAB/Castor Mapping DTD Version 1.0//EN" "http://castor.org/mapping.dtd">
+
+<mapping>
+	<class name="com.ailk.sets.grade.intf.report.InterviewInfo">
+		<map-to xml="template" />
+		<field name="id" type="java.lang.String">
+			<bind-xml name="id" node="attribute" />
+		</field>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute" />
+		</field>
+		<field name="groups" type="com.ailk.sets.grade.intf.report.InterviewInfo$Group"
+			collection="arraylist">
+			<bind-xml name="group" node="element" />
+		</field>
+	</class>
+	<class name="com.ailk.sets.grade.intf.report.InterviewInfo$Group">
+		<field name="id" type="java.lang.String">
+			<bind-xml name="id" node="attribute" />
+		</field>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="attribute" />
+		</field>
+		<field name="items" type="com.ailk.sets.grade.intf.report.InterviewInfo$Item"
+			collection="arraylist">
+			<bind-xml name="item" node="element" />
+		</field>
+	</class>
+	<class name="com.ailk.sets.grade.intf.report.InterviewInfo$Item">
+		<field name="id" type="java.lang.String">
+			<bind-xml name="id" node="attribute" />
+		</field>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="element" />
+		</field>
+		<field name="type" type="java.lang.String">
+			<bind-xml name="type" node="element" />
+		</field>
+		<field name="description" type="java.lang.String">
+			<bind-xml name="description" node="element" />
+		</field>
+		<field name="dataType" type="java.lang.String">
+			<bind-xml name="data_type" node="element" />
+		</field>
+		<field name="valueSql" type="java.lang.String">
+			<bind-xml name="value_sql" node="element" />
+		</field>
+		<field name="valueLength" type="java.lang.String">
+			<bind-xml name="value_length" node="element" />
+		</field>
+		<field name="verifyExp" type="java.lang.String">
+			<bind-xml name="verify_exp" node="element" />
+		</field>
+		<field name="values" type="com.ailk.sets.grade.intf.report.InterviewInfo$ValuePair"
+			collection="arraylist">
+			<bind-xml name="value" node="element" location="values" />
+		</field>
+	</class>
+	<class name="com.ailk.sets.grade.intf.report.InterviewInfo$ValuePair">
+		<field name="index" type="java.lang.String">
+			<bind-xml name="index" node="element" />
+		</field>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="element" />
+		</field>
+	</class>
+</mapping>

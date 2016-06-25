@@ -1,0 +1,29 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>邮件提醒</title>
+</head>
+<body style="padding:20px;background:#ffffff; font-size:14px; font-family:“微软雅黑”; color:#595959;">
+<div style="width:700px;margin:0 auto;background:#fff;text-align:left;padding:30px 40px;border-top:4px solid #4acef5;">
+    <div style="FONT-WEIGHT: bold;font-size:18px;font-family: 微软雅黑;">$entity.employerName,您好：</div>
+    <div style=" margin-left:40px;padding:14px 0px;font-size:16px; COLOR: rgb(102,102,102);font-family: 微软雅黑;">您还未勘测以下考场的信号。请在考试前带着移动3G、联通3G号码的手机到考场完成信号勘测，以确保微信考试的顺利进行。</div>
+    <div style="font-size:16px; COLOR: rgb(102,102,102);font-family: 微软雅黑;line-height:26px;">
+   <table border="1" bordercolor="#c0c0c0" cellpadding="4" cellspacing="0" style="margin-left:40px; text-align:center; margin-top:50px; margin-bottom:50px;" >
+	<tr>
+    	<td width="400px;">考场地点</td>
+        <td width="250px;">宣讲会开始时间</td>
+    </tr>
+     #foreach($activity in $entity.activities)
+	    <tr>
+    	<td>$activity.college&nbsp;&nbsp;$activity.address</td>
+        <td #if($activity.isCurrent == 1)style="color:#c00000;" #end >$activity.activityDate&nbsp;&nbsp;$activity.beginTime</td>
+       </tr>
+     #end
+     
+</table></div>
+    <div style="COLOR:#b3b3b3;border-top:1px solid #e5e5e5;padding-top:10px;margin-top:10px;font-size:14px;line-height:20px;font-family: 微软雅黑;">此为系统邮件，请勿直接回复。</div>	  
+</div>
+</body>
+</html>

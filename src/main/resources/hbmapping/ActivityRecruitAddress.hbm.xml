@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.ailk.sets.platform.intf.domain.ActivityRecruitAddress"
+		table="activity_recruit_address">
+
+		<!--地址id -->
+		<id name="addressId" type="java.lang.Integer">
+			<column name="address_id" />
+			<generator class="native" />
+		</id>
+
+		<!-- 城市 -->
+		<property name="city" type="java.lang.String">
+			<column name="city" length="30" not-null="true" />
+		</property>
+
+		<!-- 大学 -->
+		<property name="college" type="java.lang.String">
+			<column name="college" length="100" not-null="true" />
+		</property>
+
+		<!-- 详细地址 -->
+		<property name="address" type="java.lang.String">
+			<column name="address" length="100" not-null="true" />
+		</property>
+
+		<!-- 座位数量 -->
+		<property name="seatNumber" type="java.lang.Integer">
+			<column name="seat_number" length="11" not-null="true">
+				<comment>期预人数，最大人数</comment>
+			</column>
+		</property>
+
+		<!-- 移动下载速度 -->
+		<property name="cmcNum" type="java.lang.Integer">
+			<column name="cmc_num" length="11" />
+		</property>
+
+		<!--联通下载速度 -->
+		<property name="cucNum" type="java.lang.Integer">
+			<column name="cuc_num" length="11" />
+		</property>
+
+		<!--电信下载速度 -->
+		<property name="ctcNum" type="java.lang.Integer">
+			<column name="ctc_num" length="11" />
+		</property>
+		
+		<!--预计考试人数 -->
+		<property name="totalNum" type="java.lang.Integer">
+			<column name="total_num" length="11" />
+		</property>
+
+		<!-- 创建日期 -->
+		<property name="createDate" type="java.sql.Timestamp">
+			<column name="create_date" length="10" not-null="true" />
+		</property>
+
+	</class>
+</hibernate-mapping>

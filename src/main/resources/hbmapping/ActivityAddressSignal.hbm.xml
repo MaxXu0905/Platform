@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.ailk.sets.platform.intf.domain.ActivityAddressSignal"
+		table="activity_address_signal">
+		
+  		<id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+
+		<property name="addressId" type="java.lang.Integer">
+			<column name="address_id">
+				<comment> 活动地址Id </comment>
+			</column>
+		</property>
+		<property name="phone_nbr" type="java.lang.String">
+			<column name="phone_nbr" length="30">
+				<comment> 手机号 </comment>
+			</column>
+		</property>
+		<property name="phone_type" type="java.lang.String">
+			<column name="phone_type" length="30">
+				<comment> 手机型号</comment>
+			</column>
+		</property>
+		<property name="carrier" type="java.lang.String">
+			<column name="carrier" length="10">
+				<comment> 运营商: CUC, CMC, CTC, MVNO</comment>
+			</column>
+		</property>
+		<property name="net_type" type="java.lang.String">
+			<column name="net_type" length="10">
+				<comment> 网络类型：2G, 3G, 4G </comment>
+			</column>
+		</property>
+		<property name="signal_strength" type="java.lang.Integer">
+			<column name="signal_strength">
+				<comment> 移动信号强度：-110 - -50dB，值越大表示信号越好 </comment>
+			</column>
+		</property>
+		<property name="download" type="java.lang.Integer">
+			<column name="download">
+				<comment> 下载带宽, KB为单位 </comment>
+			</column>
+		</property>
+		<property name="upload" type="java.lang.Integer">
+			<column name="upload">
+				<comment> 上传带宽, KB为单位</comment>
+			</column>
+		</property>
+		<property name="begin_timeT" type="java.sql.Timestamp">
+			<column name="begin_time">
+				<comment> 开始时间 </comment>
+			</column>
+		</property>
+		<property name="end_timeT" type="java.sql.Timestamp">
+			<column name="end_time">
+				<comment> 结束时间</comment>
+			</column>
+		</property>
+		<property name="create_date" type="java.sql.Timestamp">
+			<column name="create_date">
+				<comment> 创建时间</comment>
+			</column>
+		</property>
+		<property name="duration" type="java.lang.Integer">
+			<column name="duration">
+				<comment> 测试时长 </comment>
+			</column>
+		</property>
+
+		<!--测试人 -->
+		<property name="signalTester" type="java.lang.Integer">
+			<column name="signal_tester" length="11" />
+		</property>
+
+	</class>
+</hibernate-mapping>

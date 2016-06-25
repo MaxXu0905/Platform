@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+    在线申测信息
+-->
+<hibernate-mapping>
+    <class name="com.ailk.sets.platform.intf.empl.domain.OnlineExamReq" table="online_exam_req">
+    
+    	<!-- id -->
+        <id name="reqId" type="java.lang.Long">
+            <column name="req_id" />
+            <generator class="identity" />
+        </id>
+        <property name="candidateId" type="java.lang.Integer">
+            <column name="candidate_id" />
+        </property>
+        <property name="positionId" type="java.lang.Integer">
+            <column name="position_id" />
+        </property>
+        
+        <property name="testId" type="java.lang.Long">
+            <column name="test_id" length="20" />
+        </property>
+        
+        <!-- 考试口令 -->
+        <property name="passport" type="java.lang.String">
+            <column name="passport" />
+        </property>
+        
+        <property name="createDate" type="java.sql.Timestamp">
+            <column name="create_date">
+            </column>
+        </property>
+        
+        <property name="status" type="java.lang.Integer">
+            <column name="status" />
+        </property>
+    </class>
+</hibernate-mapping>
