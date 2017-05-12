@@ -29,8 +29,8 @@ public class OssClientUtil {
 
 	private static final String OSS_ENDPOINT = "http://oss-cn-beijing.aliyuncs.com/";
 
-	private static String accessId = "YvDPojSAo3YgjMXF";
-	private static String accessKey = "OtUTMq8xjSw4f2v9X4s8Wbgna7OfLT";
+	private static String accessId = "";
+	private static String accessKey = "";
 	private OSSClient client;
 
 	public OssClientUtil() {
